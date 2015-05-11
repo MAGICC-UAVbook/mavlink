@@ -17,6 +17,7 @@
 # cd include/mavlink/v1.0
 # git clone git@github.com:mavlink/c_library.git .
 # cd ~/src/mavlink
+# export PYTHONPATH="~/src/mavlink:$PYTHONPATH"
 # ./scripts/update_c_library.sh
 #
 # A one-liner for the TMP directory (e.g. for crontab)
