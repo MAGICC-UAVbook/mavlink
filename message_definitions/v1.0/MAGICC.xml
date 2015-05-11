@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>common.xml</include>
+    <version>1</version>
+    <messages>
+        <message id="150" name="HIL_VEHICLE_STATE">
+            <description>Sent from simulation to autopilot. Values of all state data that would be output by the estimator. Euler angles phi, theta, psi always have to be valid; the quaternion is optional.</description>
+            <field type="uint64_t" name="time_usec">Timestamp (microseconds since UNIX epoch or microseconds since system boot)</field>
+            <field type="float[3]" name="position">Position north, east, height (m)</field>
+            <field type="float" name="Va">Airspeed (m/s)</field>
+            <field type="float" name="alpha">Angle of attack (rad)</field>
+            <field type="float" name="beta">Side slip angle (rad)</field>
+            <field type="float" name="phi">Roll angle (rad)</field>
+            <field type="float" name="theta">Pitch angle (rad)</field>
+            <field type="float" name="psi">Yaw angle (rad)</field>
+            <field type="float" name="chi">Course angle (rad)</field>
+            <field type="float" name="p">Body-frame roll rate (rad/s)</field>
+            <field type="float" name="q">Body-frame pitch rate (rad/s)</field>
+            <field type="float" name="r">Body-frame yaw rate (rad/s)</field>
+            <field type="float" name="Vg">Ground speed (m/s)</field>
+            <field type="float" name="wn">Wind speed north component</field>
+            <field type="float" name="we">Wind speed east component</field>
+            <field type="float[4]" name="quat">Attitude quaternion {w,x,y,z} (NED)</field>
+            <field type="uint8_t" name="quat_valid">Quaternion valid (boolean value)</field>
+        </message>
+    </messages>
+</mavlink>
