@@ -23,5 +23,14 @@
             <field type="float[4]" name="quat">Attitude quaternion {w,x,y,z} (NED)</field>
             <field type="uint8_t" name="quat_valid">Quaternion valid (boolean value)</field>
         </message>
+	<message id="151" name="HIL_CONTROLLER_COMMANDS">
+            <description>Sent from simulation to autopilot. Values of all commands that would be output by the path follower. Va_c, h_c, chi_c always have to be valid; the aux array is optional.</description>
+            <field type="uint64_t" name="time_usec">Timestamp (microseconds since UNIX epoch or microseconds since system boot)</field>
+            <field type="float" name="Va_c">Commanded airspeed (m/s)</field>
+            <field type="float" name="h_c">Commanded altitude (m)</field>
+            <field type="float" name="chi_c">Commanded course (rad)</field>
+            <field type="float[4]" name="aux">Optional auxiliary commands</field>
+            <field type="uint8_t" name="aux_valid">Auxiliary commands valid (boolean value)</field>
+        </message>
     </messages>
 </mavlink>
