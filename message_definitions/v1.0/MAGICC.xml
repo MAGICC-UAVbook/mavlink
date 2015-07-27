@@ -32,5 +32,13 @@
             <field type="float[4]" name="aux">Optional auxiliary commands</field>
             <field type="uint8_t" name="aux_valid">Auxiliary commands valid (boolean value)</field>
         </message>
+        <message id="152" name="NEW_WAYPOINT">
+            <description>Sent from simulation to autopilot. Values of all waypoints that would be output by the path planner. w and set_current always have to be valid; the chi_d is optional.</description>
+            <field type="uint64_t" name="time_usec">Timestamp (microseconds since UNIX epoch or microseconds since system boot)</field>
+            <field type="float[3]" name="w">waypoint in local NED (m)</field>
+            <field type="float" name="chi_d">Desired course at this waypoint (rad)</field>
+            <field type="uint8_t" name="chi_valid">Desired course valid (boolean value)</field>
+            <field type="uint8_t" name="set_current">Sets this waypoint to be exicuted now! (boolean value)</field>
+        </message>
     </messages>
 </mavlink>
