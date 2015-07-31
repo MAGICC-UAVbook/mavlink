@@ -38,7 +38,8 @@
             <field type="float[3]" name="w">waypoint in local NED (m)</field>
             <field type="float" name="chi_d">Desired course at this waypoint (rad)</field>
             <field type="uint8_t" name="chi_valid">Desired course valid (boolean value)</field>
-            <field type="uint8_t" name="set_current">Sets this waypoint to be exicuted now! (boolean value)</field>
+            <field type="float" name="Va_d">Desired airspeed at this waypoint (m/s)</field>
+	    <field type="uint8_t" name="set_current">Sets this waypoint to be exicuted now! (boolean value)</field>
         </message>
     </messages>
 </mavlink>
